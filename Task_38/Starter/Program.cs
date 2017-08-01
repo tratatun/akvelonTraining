@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Task_38;
 
-namespace Task_38
+namespace LargestSum_starter
 {
     class Program
     {
@@ -15,7 +16,7 @@ namespace Task_38
             string res = String.Empty;
             foreach (int i in result)
             {
-                res += i.ToString() + " ";
+                res += i + " ";
             }
             Console.WriteLine(res);
             Console.ReadKey();

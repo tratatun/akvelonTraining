@@ -42,8 +42,6 @@ namespace Task_38
 
             int[] subArr = new int[endMax - startMax + 1];
 
-            Console.WriteLine(maxSum);
-
             Array.Copy(arr, startMax, subArr, 0, endMax - startMax + 1);
 
             return subArr;
