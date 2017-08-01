@@ -55,7 +55,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Task_38\LargestSumSearch.csproj">
+    <ProjectReference Include="..\LargestSumSearch\LargestSumSearch.csproj">
       <Project>{8b60a40f-d411-44c9-995d-f159344622f7}</Project>
       <Name>LargestSumSearch</Name>
     </ProjectReference>
