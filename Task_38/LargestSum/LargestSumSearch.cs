@@ -10,39 +10,43 @@ namespace Task_38
     {
         public static int[] FindLargestSum(int[] arr)
         {
-            int totalSum = 0, 
-                minSum = 0, 
-                maxSum = int.MinValue, 
-                start = 0, 
-                end = 0, 
-                minPos = -1;
+            if (arr.Length == 0)
+            {
+                return new int[0];
+            }
 
-            // Implementing Kaden's algorithm 
-            for (int i = 0; i < arr.Length; i++)
+            int maxSum = arr[0], currSum = arr[0], start = 0, end = 0, startMax = 0, endMax = 0;
+
+            for (int i = 1; i < arr.Length; i++)
             {
 
-                totalSum += arr[i];
-
-                int curr = totalSum - minSum;
-
-                if (maxSum < curr)
-                {   
-                    maxSum = curr;
-                    start = minPos;
+                if (arr[i] > arr[i] + currSum)
+                {
+                    currSum = arr[i];
+                    start = end = i;
+                }
+                else
+                {
+                    currSum += arr[i];
                     end = i;
                 }
 
-                if (minSum > totalSum)
+                if (currSum > maxSum)
                 {
-                    minSum = totalSum;
-                    minPos = i;
+                    maxSum = currSum;
+                    startMax = start;
+                    endMax = end;
                 }
             }
-            int[] subArr = new int[end-start];
 
-            Array.Copy(arr, start + 1, subArr, 0, end - start);
+
+            int[] subArr = new int[endMax - startMax + 1];
+
+            Console.WriteLine(maxSum);
+
+            Array.Copy(arr, startMax, subArr, 0, endMax - startMax + 1);
 
             return subArr;
-        }
+        } 
     }
 }
