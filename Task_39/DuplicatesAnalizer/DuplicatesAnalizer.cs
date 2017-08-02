@@ -10,6 +10,10 @@ namespace DuplicatesAnalizer
 
             for (int i = 0; i < arr.Length; i++)
             {
+                if (arr[i] <= 0 || arr[i] > arr.Length)
+                {
+                    throw new ArgumentException("values must be between 1 and the array length");
+                }
                 int abs = arr[i];
                 if (abs < 0)
                 {
