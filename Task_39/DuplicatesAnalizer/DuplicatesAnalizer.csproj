@@ -7,8 +7,8 @@
     <ProjectGuid>{02569FA3-5167-481C-B8ED-7BDB523AC794}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CheckForDuplicates</RootNamespace>
-    <AssemblyName>CheckForDuplicates</AssemblyName>
+    <RootNamespace>DuplicatesAnalizer</RootNamespace>
+    <AssemblyName>DuplicatesAnalizer</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DuplicatesAnalizer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
