@@ -77,15 +77,5 @@ namespace LargestSumSearch.Test
 
             CollectionAssert.AreEqual(new[] { 4 }, result);
         }
-
-        [TestMethod]
-        public void TwoLargestSumTest()
-        {
-            int[] arr = {1, -2, 2, 1, -4, 1, 1, 1 - 1};
-
-            int[] result = new LargestSumSearch(arr).FindLargestSum();
-
-            CollectionAssert.AreEqual(new[] { 2, 1 }, result);
-        }
     }
 }
