@@ -22,9 +22,9 @@ namespace DrawTools
             while (y >= 0)
             {
                 circle.Add(new Pixel(x, y));
-                circle.Add(new Pixel(x, - y));
-                circle.Add(new Pixel(- x, y));
-                circle.Add(new Pixel(- x, - y));
+                circle.Add(new Pixel(x, -y));
+                circle.Add(new Pixel(-x, y));
+                circle.Add(new Pixel(-x, -y));
 
                 err = 2 * (delta + y) - 1;
                 if (delta < 0 && err <= 0)

@@ -11,7 +11,7 @@ namespace DrawTools_starter
     {
         static void Main(string[] args)
         {
-            int R = 4;
+            int R = 10;
             List<Pixel> list = DrawTools.DrawTools.DrawCircle(R);
 
             string POINT = "*";
