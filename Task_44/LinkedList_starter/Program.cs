@@ -11,12 +11,9 @@ namespace LinkedList_starter
     {
         static void Main(string[] args)
         {
-            MyLinkedList list = new MyLinkedList(2, new MyLinkedList(3, new MyLinkedList(5, new MyLinkedList(1, new MyLinkedList(5))))),
-                list2;
-
-            list2 = list.Reverse();
-
-
+            MyLinkedList list = new MyLinkedList(2, new MyLinkedList(3, new MyLinkedList(5, new MyLinkedList(1, new MyLinkedList(5)))));
+            Console.WriteLine(list);
+            Console.WriteLine(list.Reverse());
 
         }
     }
