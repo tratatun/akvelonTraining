@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedListTools", "LinkedListTools\LinkedListTools.csproj", "{F79B045B-5190-42F2-BEA4-BFE62DA4A441}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedListTools_starter", "LinkedListTools_starter\LinkedListTools_starter.csproj", "{61E98D63-31FA-4830-81E6-4785A0C4AE13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedListTools.Tests", "LinkedListTools.Tests\LinkedListTools.Tests.csproj", "{545EEE3D-5F17-4EBA-A98D-8459978D3BE6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{F79B045B-5190-42F2-BEA4-BFE62DA4A441}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F79B045B-5190-42F2-BEA4-BFE62DA4A441}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F79B045B-5190-42F2-BEA4-BFE62DA4A441}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61E98D63-31FA-4830-81E6-4785A0C4AE13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61E98D63-31FA-4830-81E6-4785A0C4AE13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61E98D63-31FA-4830-81E6-4785A0C4AE13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61E98D63-31FA-4830-81E6-4785A0C4AE13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{545EEE3D-5F17-4EBA-A98D-8459978D3BE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{545EEE3D-5F17-4EBA-A98D-8459978D3BE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{545EEE3D-5F17-4EBA-A98D-8459978D3BE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{545EEE3D-5F17-4EBA-A98D-8459978D3BE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

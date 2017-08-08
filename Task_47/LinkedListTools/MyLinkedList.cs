@@ -27,35 +27,41 @@
             }
         }
 
-        public void AddAtIndex(MyLinkedList node, int index)
+        public bool AddAtIndex(MyLinkedList node, int index)
         {
-            if (index <= 0)
+            if (index == 1)
             {
                 node.Child = Child;
                 Child = node;
+                return true;
             }
-            else
+
+            if(Child != null)
             {
-                index--;
-                Child.AddAtIndex(node, index);
+                return Child.AddAtIndex(node, --index);
             }
+
+            return false;
         }
 
-        public void DeleteElements(int indexStart, int indexlast)
+        public MyLinkedList DeleteElement(int index)
         {
-            //if (index <= 0)
-            //{
-            //    node.Child = Child;
-            //    Child = node;
-            //}
-            //else
-            //{
-            //    index--;
-            //    Child.AddAtIndex(node, index);
-            //}
+            if (Child != null)
+            {
+                if (index == 1)
+                {
+                    MyLinkedList deleted = Child;
+                    Child = Child.Child;
+                    deleted.Child = null;
+                    return deleted;
+                }
+                else
+                {
+                    return Child.DeleteElement(--index);
+                }
+            }
+            return null;
         }
-
-
 
         public override string ToString()
         {
