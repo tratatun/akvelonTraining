@@ -11,22 +11,24 @@ namespace BinaryTreeTools_starter
         static void Main(string[] args)
         {
             Tree tree = new Tree();
-            tree.Left = new Tree();
-            tree.Left.Left = new Tree();
-            tree.Left.Left.Right = new Tree();
-            tree.Left.Left.Right.Left = new Tree();
-            tree.Left.Left.Right.Left.Left = new Tree();
-            tree.Left.Left.Right.Left.Left.Right = new Tree();
-            tree.Left.Left.Right.Left.Left.Right.Right = new Tree();
-            tree.Right = new Tree();
-            tree.Right.Left = new Tree();
-            tree.Right.Left.Right = new Tree();
-            tree.Right.Left.Right.Left = new Tree();
-            tree.Right.Left.Right.Left.Right = new Tree();
-            tree.Right.Left.Right.Left.Right.Right = new Tree();
+            
+            for (int i = 0; i < 10; i++)
+            {
+                if (i % 3 == 0)
+                {
+                    tree = new Tree(i, tree, tree);
+                }
+                else if (i % 2 == 0)
+                {
+                    tree = new Tree(i, null, tree);
+                }
+                else
+                {
+                    tree = new Tree(i, tree, null);
+                }
+            }
 
-            Console.WriteLine(tree.GetDepth());
-            Console.WriteLine(tree);
+            Console.WriteLine(tree.GetDepthRecur());
 
             Console.ReadKey();
         }

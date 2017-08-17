@@ -12,16 +12,27 @@ namespace BinaryTreeTools
         public Tree Left;
         public Tree Right;
 
-        public int GetDepth()
+        public Tree()
+        {
+        }
+
+        public Tree(int data, Tree left = null, Tree right = null)
+        {
+            Data = data;
+            Left = left;
+            Right = right;
+        }
+
+        public int GetDepthRecur()
         {
             int lDepth = 0, rDepth = 0;
             if (Left != null)
             {
-                lDepth = Left.GetDepth();
+                lDepth = Left.GetDepthRecur();
             }
             if (Right != null)
             {
-                rDepth = Right.GetDepth();
+                rDepth = Right.GetDepthRecur();
             }
             if (rDepth > lDepth)
             {

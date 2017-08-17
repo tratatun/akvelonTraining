@@ -10,18 +10,15 @@ namespace BinaryTreeTools.Tests
         public void TreeDepthTest()
         {
 
-            Tree tree = new Tree();
-            tree.Left = new Tree();
-            tree.Left.Left = new Tree();
-            tree.Left.Left.Right = new Tree();
-            tree.Left.Left.Right.Left = new Tree();
-            tree.Right = new Tree();
-            tree.Right.Left = new Tree();
-            tree.Right.Left.Right = new Tree();
+            Tree tree = new Tree(5);
+            for (int i = 0; i < 10; i++)
+            {
+                tree = new Tree(i, tree, tree);
+            }
 
-            int depth = tree.GetDepth();
+            int depth = tree.GetDepthRecur();
 
-            Assert.AreEqual(depth, 5);
+            Assert.AreEqual(depth, 11);
 
         }
     }
