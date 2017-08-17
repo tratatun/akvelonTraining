@@ -9,41 +9,71 @@ namespace TextTools.Tests
         [TestMethod]
         public void EmptyStringTest()
         {
-            string input = String.Empty;
+            char[] input = String.Empty.ToCharArray();
 
-            string result = TextTools.ReverseSentence(input);
+            char[] result = TextTools.ReverseSentence(input);
 
-            Assert.AreEqual(String.Empty, result);
+            CollectionAssert.AreEqual(String.Empty.ToCharArray(), result);
         }
 
         [TestMethod]
         public void OneWordStringTest()
         {
-            string input = "Hello";
+            char[] input = "Hello".ToCharArray();
 
-            string result = TextTools.ReverseSentence(input);
+            char[] result = TextTools.ReverseSentence(input);
 
-            Assert.AreEqual("Hello", result);
+            CollectionAssert.AreEqual("Hello".ToCharArray(), result);
         }
 
         [TestMethod]
         public void FewWordsStringTest()
         {
-            string input = "Hello test world!";
+            char[] input = "Hello test world!".ToCharArray();
 
-            string result = TextTools.ReverseSentence(input);
+            char[] result = TextTools.ReverseSentence(input);
 
-            Assert.AreEqual("world! test Hello", result);
+            CollectionAssert.AreEqual("world! test Hello".ToCharArray(), result);
+        }
+
+        [TestMethod]
+        public void WordSeparatedMoreThanOneSpaceTest()
+        {
+            char[] input = "Hello   tes   t world!".ToCharArray();
+
+            char[] result = TextTools.ReverseSentence(input);
+
+            CollectionAssert.AreEqual("world! t   tes   Hello".ToCharArray(), result);
         }
 
         [TestMethod]
         public void NullStringTest()
         {
-            string input = null;
+            char[] input = null;
 
-            string result = TextTools.ReverseSentence(input);
+            char[] result = TextTools.ReverseSentence(input);
 
             Assert.IsNull(result);
+        }
+
+        [TestMethod]
+        public void OneSpaceTest()
+        {
+            char[] input = " ".ToCharArray();
+
+            char[] result = TextTools.ReverseSentence(input);
+
+            CollectionAssert.AreEqual(" ".ToCharArray(), result);
+        }
+
+        [TestMethod]
+        public void FewSpacesTest()
+        {
+            char[] input = "   ".ToCharArray();
+
+            char[] result = TextTools.ReverseSentence(input);
+
+            CollectionAssert.AreEqual("   ".ToCharArray(), result);
         }
     }
 }

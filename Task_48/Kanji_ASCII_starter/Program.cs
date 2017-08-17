@@ -4,15 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TextTools_starter
+namespace Kanji_ASCII_starter
 {
     class Program
     {
         static void Main(string[] args)
         {
-            char[] arr = "first second third fourth".ToCharArray();
-            Console.WriteLine(TextTools.TextTools.ReverseSentence(arr));
-            Console.ReadKey();
+            Kanji_ASCII.Kanji_ASCII.Backspace(new [] { '佘', '亹', 'r' });
         }
     }
 }
