@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.8
+VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastMultiplier", "FastMultiplier\FastMultiplier.csproj", "{3F455871-E939-4C19-9927-E59869AFAF46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastMultiplier_starter", "FastMultiplier_starter\FastMultiplier_starter.csproj", "{3A73FFC9-5D66-429B-8236-FD4BF2CDC0FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastMultiplier.Tests", "FastMultiplier.Tests\FastMultiplier.Tests.csproj", "{18CD216B-4C5C-41E4-AFDE-BDEAC6DC5F28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{3F455871-E939-4C19-9927-E59869AFAF46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F455871-E939-4C19-9927-E59869AFAF46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F455871-E939-4C19-9927-E59869AFAF46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A73FFC9-5D66-429B-8236-FD4BF2CDC0FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A73FFC9-5D66-429B-8236-FD4BF2CDC0FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A73FFC9-5D66-429B-8236-FD4BF2CDC0FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A73FFC9-5D66-429B-8236-FD4BF2CDC0FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18CD216B-4C5C-41E4-AFDE-BDEAC6DC5F28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18CD216B-4C5C-41E4-AFDE-BDEAC6DC5F28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18CD216B-4C5C-41E4-AFDE-BDEAC6DC5F28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18CD216B-4C5C-41E4-AFDE-BDEAC6DC5F28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

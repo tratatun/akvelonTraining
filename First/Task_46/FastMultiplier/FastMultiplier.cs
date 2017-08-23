@@ -10,8 +10,7 @@ namespace FastMultiplier
     {
         public static int FastMultiplierTo7(int num)
         {
-            int result = 0;
-
+            int result = (num << 3) - num;
             return result;
         }
     }
