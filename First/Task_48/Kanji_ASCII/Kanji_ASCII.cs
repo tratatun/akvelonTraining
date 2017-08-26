@@ -8,9 +8,9 @@ namespace Kanji_ASCII
 {
     public static class Kanji_ASCII
     {
-        public static char[] Backspace(char[] arr)
+        public static byte[] Backspace(byte[] arr)
         {
-            char[] arr1 = { '佘', '亹', 'r' };
+            
 
             return arr;
         }
