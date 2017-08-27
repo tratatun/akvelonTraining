@@ -10,7 +10,7 @@ namespace StringExcluder_starter
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(StringExcluder.StringExcluder.ExludeCharacters("ad", "qweasdf"));
+            Console.WriteLine(StringExcluder.StringExcluder.TrivialExludeCharacters("ad", "qweasdf"));
             Console.ReadKey();
         }
     }
