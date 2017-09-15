@@ -45,5 +45,15 @@ namespace LooplessPow.Tests
 
             Assert.AreEqual(false, isPow);
         }
+
+        [TestMethod]
+        public void IntMaxTest()
+        {
+            int pow = int.MaxValue;
+
+            bool isPow = LooplessPow.IsNumberPowerOfTwo(pow);
+
+            Assert.AreEqual(false, isPow);
+        }
     }
 }
