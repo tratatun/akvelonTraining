@@ -15,66 +15,64 @@ namespace ArrayPrinter
             Direction direction = Direction.Down;
             while (i < arr.LongLength)
             {
-                switch (direction)
+                if (direction == Direction.Down)
+                    if (h < arr.GetLength(0) - downEdge)
+                    {
+                        result += arr[h++, w] + " ";
+                        i++;
+                    }
+                    else
+                    {
+                        downEdge++;
+                        h--;
+                        w++;
+                        direction = Direction.Right;
+                    }
+                else if (direction == Direction.Right)
                 {
-                    case Direction.Down:
-                        if (h < arr.GetLength(0) - downEdge)
-                        {
-                            result += arr[h++, w] + " ";
-                            i++;
-                        }
-                        else
-                        {
-                            downEdge++;
-                            h--;
-                            w++;
-                            direction = Direction.Right;
-                        }
-                        break;
-                    case Direction.Right:
-                        if (w < arr.GetLength(1) - rightEdge)
-                        {
-                            result += arr[h, w++] + " ";
-                            i++;
-                        }
-                        else
-                        {
-                            rightEdge++;
-                            w--;
-                            h--;
-                            direction = Direction.Up;
-                        }
-                        break;
-                    case Direction.Up:
-                        if (h >= 0 + upEdge)
-                        {
-                            result += arr[h--, w] + " ";
-                            i++;
-                        }
-                        else
-                        {
-                            upEdge++;
-                            h++;
-                            w--;
-                            direction = Direction.Left;
-                        }
-                        break;
-                    case Direction.Left:
-                        if (w >= 0 + leftEdge)
-                        {
-                            result += arr[h, w--] + " ";
-                            i++;
-                        }
-                        else
-                        {
-                            leftEdge++;
-                            w++;
-                            h++;
-                            direction = Direction.Down;
-                        }
-                        break;
+                    if (w < arr.GetLength(1) - rightEdge)
+                    {
+                        result += arr[h, w++] + " ";
+                        i++;
+                    }
+                    else
+                    {
+                        rightEdge++;
+                        w--;
+                        h--;
+                        direction = Direction.Up;
+                    }
                 }
-
+                else if (direction == Direction.Up)
+                {
+                    if (h >= 0 + upEdge)
+                    {
+                        result += arr[h--, w] + " ";
+                        i++;
+                    }
+                    else
+                    {
+                        upEdge++;
+                        h++;
+                        w--;
+                        direction = Direction.Left;
+                    }
+                }
+                else if (direction == Direction.Left)
+                {
+                    if (w >= 0 + leftEdge)
+                    {
+                        result += arr[h, w--] + " ";
+                        i++;
+                    }
+                    else
+                    {
+                        leftEdge++;
+                        w++;
+                        h++;
+                        direction = Direction.Down;
+                    }
+                }
             }
             return result.TrimEnd();
         }

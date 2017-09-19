@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardsShuffler", "CardsShuffler\CardsShuffler.csproj", "{A54EAD6A-A6B1-4AAB-8679-0F813861413C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A54EAD6A-A6B1-4AAB-8679-0F813861413C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A54EAD6A-A6B1-4AAB-8679-0F813861413C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A54EAD6A-A6B1-4AAB-8679-0F813861413C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A54EAD6A-A6B1-4AAB-8679-0F813861413C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4C1D7DCD-9859-42B8-8B88-58A460C6A6DE}
+	EndGlobalSection
+EndGlobal

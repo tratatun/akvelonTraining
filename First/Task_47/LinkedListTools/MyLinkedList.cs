@@ -44,25 +44,45 @@
             return false;
         }
 
-        public MyLinkedList DeleteElement(int index)
+        public static void DeleteElement(ref MyLinkedList head, int index)
         {
-            if (Child != null)
+            if (head == null) return;
+
+            if (index == 0)
+            {
+                head = head.Child;
+            }
+            else if (head.Child != null)
             {
                 if (index == 1)
                 {
-                    MyLinkedList deleted = Child;
-                    Child = Child.Child;
+                    MyLinkedList deleted = head.Child;
+                    head.Child = head.Child.Child;
                     deleted.Child = null;
-                    return deleted;
                 }
                 else
                 {
-                    return Child.DeleteElement(--index);
+                    DeleteElement(ref head.Child, --index);
                 }
             }
-            return null;
         }
+        public static void DeleteByValue(ref MyLinkedList head, int value)
+        {
+            if (head == null) return;
 
+            if (head.Data == value)
+            {
+                head = head.Child;
+            }
+            else if (head.Child != null && head.Child.Data == value)
+            {
+                head.Child = head.Child.Child;
+            }
+            else
+            {
+                DeleteByValue(ref head.Child, value);
+            }
+        }
         public override string ToString()
         {
             return Data + "->" + Child;

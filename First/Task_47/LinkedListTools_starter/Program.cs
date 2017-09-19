@@ -25,9 +25,9 @@ namespace LinkedListTools_starter
             list.AddLast(new MyLinkedList(12));
 
             Console.WriteLine(list);
-
+            MyLinkedList.DeleteElement(ref list, 5);
             //delete enement and showing deleted
-            Console.WriteLine(list.DeleteElement(5));
+            Console.WriteLine(list);
 
             Console.WriteLine(list);
 

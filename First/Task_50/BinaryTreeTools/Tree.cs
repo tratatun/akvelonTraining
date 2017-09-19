@@ -40,5 +40,47 @@ namespace BinaryTreeTools
             }
             return lDepth + 1;
         }
+
+        //public static int GetDepthIteration(Tree node)
+        //{
+        //    int depth = 1, curDepth = 0;
+        //    Tree lastNode = node;
+
+        //    while (node != null)
+        //    {
+        //        if (lastNode != node.parent)
+        //        {
+        //            if (node.Left != null)
+        //            {
+        //                lastNode = node;
+        //                node = node.Left;
+        //                continue;
+        //            }
+        //            else
+        //                lastNode = null;
+        //        }
+        //        if (lastNode == node.Left)
+        //        {
+        //            Output(node);
+
+        //            if (node.Right != null)
+        //            {
+        //                lastNode = node;
+        //                node = node.Right;
+        //                continue;
+        //            }
+        //            else
+        //                lastNode = null;
+        //        }
+        //        if (lastNode == node.Right)
+        //        {
+        //            lastNode = node;
+        //            node = node.Parent;
+        //        }
+        //    }
+
+        //    return depth;
+
+        //}
     }
 }
