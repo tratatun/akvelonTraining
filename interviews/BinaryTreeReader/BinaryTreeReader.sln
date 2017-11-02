@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTreeReader", "BinaryTreeReader\BinaryTreeReader.csproj", "{F9A24A5D-0208-4585-BFAD-BE7082294C41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTreeReader.Tests", "BinaryTreeReader.Tests\BinaryTreeReader.Tests.csproj", "{54C5980F-51B4-4B34-915E-E027083F5C00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunTrees", "RunTrees\RunTrees.csproj", "{CE642E56-B50B-4273-92CF-79646AD181E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9A24A5D-0208-4585-BFAD-BE7082294C41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9A24A5D-0208-4585-BFAD-BE7082294C41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9A24A5D-0208-4585-BFAD-BE7082294C41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9A24A5D-0208-4585-BFAD-BE7082294C41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54C5980F-51B4-4B34-915E-E027083F5C00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54C5980F-51B4-4B34-915E-E027083F5C00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54C5980F-51B4-4B34-915E-E027083F5C00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54C5980F-51B4-4B34-915E-E027083F5C00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE642E56-B50B-4273-92CF-79646AD181E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE642E56-B50B-4273-92CF-79646AD181E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE642E56-B50B-4273-92CF-79646AD181E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE642E56-B50B-4273-92CF-79646AD181E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
