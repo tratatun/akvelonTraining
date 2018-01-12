@@ -1,13 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace DuplicatesAnalizer
+namespace DuplicatesAnalizerExtraSpace
 {
-    public static class DuplicatesAnalizer
+    public class DuplicatesAnalizerExtraSpace
     {
         public static int[] ShowDuplicates(int[] arr)
         {
+            
+            int resultLength = 0;
             for (int i = 0; i < arr.Length; i++)
             {
+                if (arr[i] >= arr.Length || arr[i] == 0)
+                    return null;
+
                 if (arr[i] > arr[arr[i]])
                 {
                     int tmp1 = arr[i];
@@ -32,19 +41,21 @@ namespace DuplicatesAnalizer
                 else
                 {
                     arr[abs] = 0;
+                    resultLength++;
                 }
             }
 
+            int[] result = new int [resultLength];
+            int j = 0;
             for (int i = 0; i < arr.Length; i++)
             {
-                if (arr[i]==0)
+                if (arr[i] == 0)
                 {
-                    Console.Write(i);
-                    Console.Write(i != arr.Length - 1 ? " " : "");
+                    result[j++] = i;
                 }
             }
 
-            return arr;
+            return result;
         }
     }
 }

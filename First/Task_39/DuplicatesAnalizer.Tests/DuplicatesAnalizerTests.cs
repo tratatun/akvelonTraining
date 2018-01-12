@@ -7,65 +7,53 @@ namespace DuplicatesAnalizer.Tests
     public class DuplicatesAnalizerTests
     {
         [TestMethod]
-        public void AnalizerReturnsDataTest()
+        public void OnlyTwoDublicatesTest()
         {
             int[] arr = {1, 1};
 
-            string result = DuplicatesAnalizer.ShowDuplicates(arr);
+            int[] result = DuplicatesAnalizer.ShowDuplicates(arr);
 
-            Assert.IsFalse(string.IsNullOrEmpty(result));
+            CollectionAssert.AreEquivalent(result, new[] {1, 0});
         }
 
         [TestMethod]
-        public void AnalizerElementDuplicatesOnesTest()
+        public void AnalizerElementTwoDuplicatesTest()
         {
             int[] arr = { 1, 2, 4, 2, 5, 1 };
 
-            string result = DuplicatesAnalizer.ShowDuplicates(arr);
+            int[] result = DuplicatesAnalizer.ShowDuplicates(arr);
 
-            Assert.AreNotEqual("1 2", result);
+            CollectionAssert.AreEquivalent(result, new[] { 1, 0, 0, 2, -5, -1 });
         }
 
         [TestMethod]
         public void AnalizerElementDuplicatesFewTimesTest()
         {
-            int[] arr = { 1, 2, 4, 2, 5, 1, 1, 2 };
+            int[] arr = { 6, 4, 4, 3, 2, 2, 5, 1, 3 };
 
-            string result = DuplicatesAnalizer.ShowDuplicates(arr);
+            int[] result = DuplicatesAnalizer.ShowDuplicates(arr);
 
-            Assert.AreNotEqual("1 2 1 2", result);
+            CollectionAssert.AreEquivalent(result, new[] { 5, -2, 0, 0, 0, -2, -6, 1, 3 });
         }
 
         [TestMethod]
-        public void AnalizerArrayContainsWrongValuesTest()
+        public void AllTheSameElementsArrayTest()
         {
-            int[] arr = { 1, 2, 4, 2, -5, 0, 1, 2 };
-            object exception = null;
+            int[] arr = {1, 1, 1, 1, 1, 1, 1};
 
-            try
-            {
-                string result = DuplicatesAnalizer.ShowDuplicates(arr);
-            }
-            catch (ArgumentException ae)
-            {
-                exception = ae;
-            }
-            catch (Exception e)
-            {
-                exception = e;
-            }
+            int[] result = DuplicatesAnalizer.ShowDuplicates(arr);
 
-            Assert.IsInstanceOfType(exception, typeof(ArgumentException));
+            CollectionAssert.AreEquivalent(result, new[] { 1, 0, 1, 1, 1, 1, 1 });
         }
 
         [TestMethod]
-        public void AnalizerEmptyArrayTest()
+        public void FewArrayTest()
         {
-            int[] arr = { };
+            int[] arr = { 1, 1, 2, 2, 3, 3, 1 };
 
-            string result = DuplicatesAnalizer.ShowDuplicates(arr);
+            int[] result = DuplicatesAnalizer.ShowDuplicates(arr);
 
-            Assert.AreEqual(string.Empty, result);
+            CollectionAssert.AreEquivalent(result, new[] { 1, 0, 0, 0, 2, 3, 1 });
         }
     }
 }

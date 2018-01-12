@@ -10,10 +10,10 @@ namespace Starter
     {
         static void Main(string[] args)
         {
-            int[] arr = {1, 2, 4, 2, 5, 1};
-            string result = DuplicatesAnalizer.DuplicatesAnalizer.ShowDuplicates(arr);
+            int[] arr = { 8, 7, 6, 5, 4,3, 2, 1, 1 };
+            DuplicatesAnalizer.DuplicatesAnalizer.ShowDuplicates(arr);
 
-            Console.WriteLine(result);
+
             Console.ReadKey();
         }
     }
