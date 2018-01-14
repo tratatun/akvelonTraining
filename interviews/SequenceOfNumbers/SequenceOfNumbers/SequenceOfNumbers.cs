@@ -8,6 +8,24 @@ namespace Sequences
 {
     public static class SequenceOfNumbers
     {
+        /*
+        You should print below number sequence 
+
+        If(n=3) 
+        then 
+        1*2*3 
+        7*8*9 
+        4*5*6 
+
+        if n=5 
+        1*2*3*4*5 
+        11*12*13*14*15 
+        21*22*23*24*25 
+        16*17*18*19*20 
+        6*7*8*9*10 
+
+        Can anyone also tell me what kind of pattern it is? Implement code.
+        */
         public static string WriteSequence(int n)
         {
             string res = string.Empty;
