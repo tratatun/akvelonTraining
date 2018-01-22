@@ -45,12 +45,19 @@ namespace CycledSortedLinkedList
                 newNode.NextNode = NextNode.NextNode;
                 NextNode.NextNode = newNode;
             }
-            else if(NextNode.Data < NextNode.NextNode.Data)
+            else if(NextNode.Data >= NextNode.NextNode.Data)
             {
                 LinkedList newNode = new LinkedList(newData);
-                if (NextNode.Data > newData)
+                if (NextNode.Data <= newData)
                 {
                     newNode.NextNode = NextNode;
+                    NextNode = newNode;
+                }
+
+                if (NextNode.NextNode.Data >= newData)
+                {
+                    newNode.NextNode = NextNode.NextNode;
+                    NextNode.NextNode = newNode;
                 }
             }
             else
@@ -59,16 +66,16 @@ namespace CycledSortedLinkedList
             }
         }
 
-        public override string ToString()
-        {
-            if (Data > NextNode.Data)
-            {
-                return Data + "->" + NextNode;
-            }
-            else
-            {
-                return Data + "->[loop]";
-            }
-        }
+        //public override string ToString()
+        //{
+        //    if (Data > NextNode.Data)
+        //    {
+        //        return Data + "->"+ NextNode;
+        //    }
+        //    else
+        //    {
+        //        return Data +"->[loop]";
+        //    }
+        //}
     }
 }

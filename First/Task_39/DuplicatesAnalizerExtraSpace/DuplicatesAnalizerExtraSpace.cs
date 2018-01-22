@@ -10,7 +10,6 @@ namespace DuplicatesAnalizerExtraSpace
     {
         public static int[] ShowDuplicates(int[] arr)
         {
-            
             int resultLength = 0;
             for (int i = 0; i < arr.Length; i++)
             {
