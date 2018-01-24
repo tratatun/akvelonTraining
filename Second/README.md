@@ -54,7 +54,7 @@ using any extra space.
 
 70. Set the highest significant bit of an unsigned integer to zero.
 
-71. Let f(k) = y where k is the y-th number in the increasing sequence of non-negative integers with
++71. Let f(k) = y where k is the y-th number in the increasing sequence of non-negative integers with
 the same number of ones in its binary representation as y, e.g. f(1) = 1, f(2) = 2, f(3) = 1, f(4) = 3, f(5) = 2,
 f(6) = 3 and so on. Given k >= 0, compute f(k).
 
