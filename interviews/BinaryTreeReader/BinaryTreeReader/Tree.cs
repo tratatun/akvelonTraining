@@ -72,5 +72,26 @@ namespace BinaryTreeReader
             }
             return result;
         }
+
+        public string ToStringDictionary()
+        {
+            string result = String.Empty;
+            Dictionary<int, Tree> q1 = new Dictionary<int, Tree>();
+            int start = 0, last = 0;
+            q1[start] = this;
+            while (q1.Any())
+            {
+                Tree curr = q1.ContainsKey(last) ? q1[last] : null;
+                q1.Remove(last--);
+                if (curr != null)
+                {
+                    result += curr.Data + " ";
+                    q1.Add(--start, curr.Left);
+                    q1.Add(--start, curr.Right);
+                }
+            }
+
+            return result;
+        }
     }
 }
