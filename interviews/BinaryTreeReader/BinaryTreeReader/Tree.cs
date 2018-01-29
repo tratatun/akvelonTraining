@@ -73,12 +73,13 @@ namespace BinaryTreeReader
             return result;
         }
 
+        // traversal print tree using Dictionary instead Queue
         public string ToStringDictionary()
         {
             string result = String.Empty;
             Dictionary<int, Tree> q1 = new Dictionary<int, Tree>();
-            int start = 0, last = 0;
-            q1[start] = this;
+            int first = 0, last = 0;
+            q1[first] = this;
             while (q1.Any())
             {
                 Tree curr = q1.ContainsKey(last) ? q1[last] : null;
@@ -86,8 +87,8 @@ namespace BinaryTreeReader
                 if (curr != null)
                 {
                     result += curr.Data + " ";
-                    q1.Add(--start, curr.Left);
-                    q1.Add(--start, curr.Right);
+                    q1.Add(--first, curr.Left);
+                    q1.Add(--first, curr.Right);
                 }
             }
 

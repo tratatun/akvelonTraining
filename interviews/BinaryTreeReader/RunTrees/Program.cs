@@ -13,8 +13,10 @@ namespace RunTrees
         static void Main(string[] args)
         {
             StreamReader stream = new StreamReader("..\\..\\inputData\\inputData.txt");
-            Tree tree = BinaryTreeReader.BinaryTreeReader.BuildTree(stream);
-            Console.Write(tree.ToString());
+            //Tree tree = BinaryTreeReader.BinaryTreeReader.BuildTree(stream);
+            Tree tree = BinaryTreeReader.BinaryTreeReader.BuildTreeDictionary(stream);
+            //Console.Write(tree.ToString());
+            Console.Write(tree.ToStringDictionary());
             Console.ReadKey();
         }
     }
