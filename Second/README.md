@@ -33,7 +33,7 @@ expected time of your algorithm?
 61. An array of pointers to (very long) strings. Find pointers to the (lexicographically) smallest and
 largest strings.
 
-62. Write a program to remove duplicates from a sorted array.
++62. Write a program to remove duplicates from a sorted array.
 
 63. Given a list of numbers (fixed list). Now given any other list, how can you efficiently find out if
 there is any element in the second list that is an element of the first list (fixed list).
