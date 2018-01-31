@@ -35,7 +35,7 @@ namespace SortingWithExtraSpace
                     }
                 }
             }
-            else if (n > K)
+            else if (n > K) // means that doplicates are exist in array
             {
                 for (int i = 0; i < n; i++)
                 {
