@@ -39,7 +39,7 @@ namespace Excluder
             {
                 if (input[i] != 0)
                 {
-                    result += input[i] - 1 + "," input[i] + 1;
+                    result += input[i] - 1 + "," + input[i] + 1;
                 }
                 else if (input[i] > 1)
                 {
