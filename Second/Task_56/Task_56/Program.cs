@@ -15,65 +15,76 @@ namespace Task_56
         static void Main(string[] args)
         {
             string[] arrStr = Console.ReadLine().Split(' ');
-            int[]arr = new int[arrStr.Length];
+            int[] arr = new int[arrStr.Length];
             for (int i = 0; i < arrStr.Length; i++)
             {
                 arr[i] = int.Parse(arrStr[i]);
             }
+            ListArray listArr = ListArray.CreateListArray(arr);
 
-            arr = UniqueElementsInArray.GetUniques(arr);
-            for (int i = 0; i < arr.Length; i++)
-            {
-                Console.Write(arr[i] + " ");
-            }
+            listArr.RemoveDuplicates();
 
-
+            Console.WriteLine(listArr.ToString());
         }
     }
 
-    public static class UniqueElementsInArray
+    public class ListArray
     {
-        public static int[] GetUniques(int[] arr)
+        public int Data;
+
+        public ListArray Next;
+
+        public void RemoveDuplicates()
         {
-            if (arr == null || arr.Length == 0)
+            if (Next != null)
             {
-                throw new ArgumentException("Empty array");
-            }
-            int n = 1, current = arr[0], j = 0;
-
-            for (int i = 1; i < arr.Length; i++)
-            {
-                if (arr[i] < 0)
+                if (Next.Data == Data)
                 {
-                    throw new ArgumentException("Negative element");
-                }
-
-                if (arr[i] < current)
-                {
-                    throw new ArgumentException("Not sorted");
-                }
-
-                if (arr[i] == current)
-                {
-                    arr[i] = -arr[i]; // mark elems by negative sign
+                    Next = Next.Next;
+                    RemoveDuplicates();
                 }
                 else
                 {
-                    current = arr[i];
-                    n++;                // count uniques
+                    Next.RemoveDuplicates();
                 }
             }
+        }
 
-            int[] result = new int[n];
+        public static ListArray CreateListArray(int[] arr)
+        {
+            if (arr == null || arr.Length==0)
+            {
+                throw new ArgumentException("List is empty!");
+            }
+
+            ListArray listArray = null, currListArray = null;
             for (int i = 0; i < arr.Length; i++)
             {
-                if (arr[i] > 0)
+                if (currListArray == null)
                 {
-                    result[j++] = arr[i];
+                    currListArray = new ListArray {Data = arr[i]};
+                    listArray = currListArray;
+                }
+                else
+                {
+                    int current = arr[i];
+                    if (currListArray.Data > current)
+                    {
+                        throw new ArgumentException("List is not sorted!");
+                    }
+
+                    currListArray.Next = new ListArray {Data = current};
+                    currListArray = currListArray.Next;
+
                 }
             }
 
-            return result;
+            return listArray;
+        }
+
+        public override string ToString()
+        {
+            return Data + "->" + Next;
         }
     }
 }

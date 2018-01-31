@@ -13,14 +13,14 @@ namespace UnitTestProject1
             string ex = String.Empty;
             try
             {
-                UniqueElementsInArray.GetUniques(arr);
+                ListArray.CreateListArray(arr);
             }
             catch (Exception e)
             {
                 ex = e.Message;
             }
 
-            Assert.AreEqual(ex, "Empty array");
+            Assert.AreEqual(ex, "List is empty!");
 
         }
 
@@ -31,14 +31,14 @@ namespace UnitTestProject1
             string ex = String.Empty;
             try
             {
-                UniqueElementsInArray.GetUniques(arr);
+                ListArray.CreateListArray(arr);
             }
             catch (Exception e)
             {
                 ex = e.Message;
             }
 
-            Assert.AreEqual(ex, "Empty array");
+            Assert.AreEqual(ex, "List is empty!");
 
         }
 
@@ -49,32 +49,14 @@ namespace UnitTestProject1
             string ex = String.Empty;
             try
             {
-                UniqueElementsInArray.GetUniques(arr);
+                ListArray.CreateListArray(arr);
             }
             catch (Exception e)
             {
                 ex = e.Message;
             }
 
-            Assert.AreEqual(ex, "Not sorted");
-
-        }
-
-        [TestMethod]
-        public void TestNegativeElementArray()
-        {
-            int[] arr = { 1, 1, -3, 3, 3, 2, 2 };
-            string ex = String.Empty;
-            try
-            {
-                UniqueElementsInArray.GetUniques(arr);
-            }
-            catch (Exception e)
-            {
-                ex = e.Message;
-            }
-
-            Assert.AreEqual(ex, "Negative element");
+            Assert.AreEqual(ex, "List is not sorted!");
 
         }
 
@@ -82,22 +64,56 @@ namespace UnitTestProject1
         public void TestNoDuplicatesArray()
         {
             int[] arr = {1, 2, 3, 4};
-            int[] result = {1, 2, 3, 4};
 
-            result = UniqueElementsInArray.GetUniques(arr);
+            ListArray result = ListArray.CreateListArray(arr);
+            result.RemoveDuplicates();
 
-            CollectionAssert.AreEqual(result, new[] {1, 2, 3, 4});
+            Assert.AreEqual(result.ToString(), "1->2->3->4->");
         }
 
         [TestMethod]
-        public void TestArray()
+        public void TestDuplicatesArray()
         {
             int[] arr = {1, 1, 2, 3, 3, 3, 3, 4, 4, 4, 5, 5};
-            int[] result = { 1, 2, 3, 4, 5 };
 
-            result = UniqueElementsInArray.GetUniques(arr);
+            ListArray result = ListArray.CreateListArray(arr);
+            result.RemoveDuplicates();
 
-            CollectionAssert.AreEqual(result, new[] { 1, 2, 3, 4, 5 });
+            Assert.AreEqual(result.ToString(), "1->2->3->4->5->");
+        }
+
+        [TestMethod]
+        public void TestSingleElement()
+        {
+            int[] arr = { 3 };
+
+            ListArray result = ListArray.CreateListArray(arr);
+            result.RemoveDuplicates();
+
+            Assert.AreEqual(result.ToString(), "3->");
+        }
+
+        [TestMethod]
+        public void TestZeroElement()
+        {
+            int[] arr = { 0 };
+
+            ListArray result = ListArray.CreateListArray(arr);
+            result.RemoveDuplicates();
+
+            Assert.AreEqual(result.ToString(), "0->");
+        }
+
+
+        [TestMethod]
+        public void TestIntMaxMinElement()
+        {
+            int[] arr = { int.MinValue, int.MinValue, 1, 2, 2, int.MaxValue, int.MaxValue };
+
+            ListArray result = ListArray.CreateListArray(arr);
+            result.RemoveDuplicates();
+
+            Assert.AreEqual(result.ToString(), int.MinValue + "->1->2->" + int.MaxValue + "->");
         }
 
     }
