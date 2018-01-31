@@ -14,13 +14,13 @@ Notes for all tasks:
 
 ___
 
-56. Write, efficient code for extracting unique elements from a sorted list of array. e.g. (1, 1, 3, 3, 3, 5, 5,
++56. Write, efficient code for extracting unique elements from a sorted list of array. e.g. (1, 1, 3, 3, 3, 5, 5,
 5, 9, 9, 9, 9) -> (1, 3, 5, 9).
 
-57. Sort an array of size n containing integers between 1 and K, given a temporary scratch integer
++57. Sort an array of size n containing integers between 1 and K, given a temporary scratch integer
 array of size K.
 
-58. Given an array of length N containing integers between 1 and N, determine if it contains any
++58. Given an array of length N containing integers between 1 and N, determine if it contains any
 duplicates.
 
 59. An array of integers. The sum of the array is known not to overflow an integer. Compute the sum.
