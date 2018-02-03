@@ -55,26 +55,8 @@ namespace BinaryTreeReader
             };
         }
 
+        // traversal print tree using Dictionary
         public override string ToString()
-        {
-            string result = String.Empty;
-            Queue<Tree> q = new Queue<Tree>();
-            q.Enqueue(this);
-            while (q.Any())
-            {
-                Tree curr = q.Dequeue();
-                if (curr != null)
-                {
-                    result += curr.Data + " ";
-                    q.Enqueue(curr.Left);
-                    q.Enqueue(curr.Right);
-                }
-            }
-            return result;
-        }
-
-        // traversal print tree using Dictionary instead Queue
-        public string ToStringDictionary()
         {
             string result = String.Empty;
             Dictionary<int, Tree> q1 = new Dictionary<int, Tree>();
