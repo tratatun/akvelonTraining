@@ -50,7 +50,7 @@ index).
 
 +50. Write a function to find the depth of a binary tree.
 
-51. Given two strings S1 and S2. Delete from S2 all those characters which occur in S1 also and finally
++51. Given two strings S1 and S2. Delete from S2 all those characters which occur in S1 also and finally
 create a clean S2 with the relevant characters deleted.
 
 52. Write a small lexical analyzer - interviewer gave tokens. Expressions like "a*b" etc.

@@ -48,11 +48,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\StringExcluder\StringExcluder.csproj">
-      <Project>{670543a5-5ad4-4c53-b943-bbc324e03320}</Project>
-      <Name>StringExcluder</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
