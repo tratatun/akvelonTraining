@@ -46,7 +46,7 @@ extra space?
 66. Given a binary tree with nodes, print out the values in pre-order/in-order/post-order without
 using any extra space.
 
-67. Given a singly linked list, find the middle of the list.
++67. Given a singly linked list, find the middle of the list.
 
 68. Reverse the bits of an unsigned integer.
 
