@@ -15,7 +15,7 @@ Notes for all tasks:
 ___
 
 +38. Given an array containing both positive and negative integers and required to find the sub-array
-with the largest sum (O(N)).
+with the largest sum (O(N)). (Kadane's algoritm)
 
 +39. Given an array of size N in which every number is between 1 and N, determine if there are any
 duplicates in it and what kind. You are allowed to destroy or modify the array if you like.
