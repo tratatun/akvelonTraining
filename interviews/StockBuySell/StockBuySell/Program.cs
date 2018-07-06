@@ -1,4 +1,7 @@
 ﻿using System;
+using System.IO;
+using System.Text;
+
 public class GFG
 {
     static public void Main()
@@ -9,12 +12,12 @@ public class GFG
         ///For example, if the given array is {100, 180, 260, 310, 40, 535, 695}, the maximum profit can earned by buying on day 0, selling on day 3. 
         ///Again buy on day 4 and sell on day 6. If the given array of prices is sorted in decreasing order, then profit cannot be earned at all.
 
-        int n = int.Parse(Console.ReadLine());
+        int n = int.Parse(ReadLine());
         int[][] arrArr = new int[n][];
         for (int j = 0; j < n; j++)
         {
             Console.ReadLine();
-            string[] arrStr = Console.ReadLine().Split(' ');
+            string[] arrStr = ReadLine().Split(' ');
             arrArr[j] = new int[arrStr.Length];
             for (int i = 0; i < arrStr.Length; i++)
             {
@@ -28,6 +31,16 @@ public class GFG
         Console.ReadKey();
     }
 
+    // method to increase console input length
+    private static string ReadLine()
+    {
+        Stream inputStream = Console.OpenStandardInput(5000);
+        byte[] bytes = new byte[5000];
+        int outputLength = inputStream.Read(bytes, 0, 5000);
+        //Console.WriteLine(outputLength);
+        char[] chars = Encoding.UTF7.GetChars(bytes, 0, outputLength);
+        return new string(chars);
+    }
     public static string StockBuySell(int[] arr)
     {
         string result = string.Empty;

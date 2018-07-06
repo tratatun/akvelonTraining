@@ -9,7 +9,7 @@ namespace BinaryTreeReader
 {
     public class BinaryTreeReader
     {
-        // creating tree using Dictionary instead Queue
+        // creating tree using Queue
         public static Tree BuildTree(StreamReader stream)
         {
             if (stream == null)
@@ -19,7 +19,7 @@ namespace BinaryTreeReader
             bool isInit = true;
             long length = 0, atempts = 0;
             int first = 0, last = -1;
-            Dictionary<int,Tree> trees = new Dictionary<int, Tree>();
+            Queue<Tree> trees = new Queue<Tree>();
             Regex regex = new Regex("^[A-Za-z#,\\s]+$");
             Tree seed = new Tree();
             while (!stream.EndOfStream)
@@ -34,12 +34,12 @@ namespace BinaryTreeReader
 
                 length++;
                 Tree tree = Tree.ParseTree(line);
-                trees.Add(--first, tree);
+                trees.Enqueue(tree);
             }
 
             if (length > 0)
             {
-                seed = trees.First().Value;
+                seed = trees.First();
             }
 
             while (trees.Any())
@@ -54,11 +54,10 @@ namespace BinaryTreeReader
             return seed;
         }
 
-        // linking tree nodes using Dictionary
-        private static Tree GrowSeed(Dictionary<int, Tree> parentList, Tree seed, ref int first, ref int last)
+        // linking tree nodes using Queue
+        private static Tree GrowSeed(Queue<Tree> parentList, Tree seed, ref int first, ref int last)
         {
-            Tree tree = parentList.ContainsKey(last) ? parentList[last] : null;
-            parentList.Remove(last--);
+            Tree tree = parentList.Dequeue();
             if (tree != null && seed.Data == tree.Data)
             {
                 return seed;
@@ -78,7 +77,7 @@ namespace BinaryTreeReader
                     return tree;
                 }
 
-                parentList.Add(--first, tree);
+                parentList.Enqueue(tree);
             }
             return seed;
         }
