@@ -11,8 +11,8 @@ namespace LeavesOnSameLevel
         static void Main(string[] args)
         {
             ////Check if all leaves are at same level
+            ///https://www.geeksforgeeks.org/check-leaves-level/
             /// Recursive
-            //int n = int.Parse(Console.ReadLine());
             Tree root = null, current = root;
             root = new Tree(0);
             root.Left = new Tree(1);
