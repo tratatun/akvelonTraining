@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 
 namespace BinaryTreeReader
@@ -39,10 +37,10 @@ namespace BinaryTreeReader
 
             if (length > 0)
             {
-                seed = trees.First();
+                seed = trees.Peek();
             }
 
-            while (trees.Any())
+            while (trees.Count > 0)
             {
                 seed = GrowSeed(trees, seed, ref first, ref last);
                 atempts++;
