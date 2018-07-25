@@ -12,8 +12,20 @@ namespace FibonacciLessNum
         {
             int n = int.Parse(Console.ReadLine());
 
-            WriteFibonacci(n);
+            //WriteFibonacci(n);
+            Console.WriteLine(Fibonacci(n));
             Console.ReadLine();
+
+        }
+        public static int Fibonacci(int n)
+        {
+            double sqrt5 = Math.Sqrt(5);
+            double f = (Math.Pow((1 + sqrt5) / 2, n) - Math.Pow((1 - sqrt5) / 2, n)) / sqrt5;
+
+            return Convert.ToInt16(f);
+
+            // Write your code here.
+
         }
 
         public static long[] GetFibonacciArr(int n)
