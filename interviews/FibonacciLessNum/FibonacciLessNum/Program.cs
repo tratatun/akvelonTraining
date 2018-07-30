@@ -11,7 +11,7 @@ namespace FibonacciLessNum
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
-
+            
             //WriteFibonacci(n);
             foreach(int x in FibonacciGen(n))
             {
