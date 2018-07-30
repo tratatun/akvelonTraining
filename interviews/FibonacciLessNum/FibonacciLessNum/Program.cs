@@ -13,7 +13,7 @@ namespace FibonacciLessNum
             int n = int.Parse(Console.ReadLine());
 
             //WriteFibonacci(n);
-            Console.WriteLine(Fibonacci(n));
+            Console.WriteLine(WriteFibonacciNumbers(n));
             Console.ReadLine();
 
         }
@@ -22,7 +22,7 @@ namespace FibonacciLessNum
             double sqrt5 = Math.Sqrt(5);
             double f = (Math.Pow((1 + sqrt5) / 2, n) - Math.Pow((1 - sqrt5) / 2, n)) / sqrt5;
 
-            return Convert.ToInt16(f);
+            return Convert.ToInt32(f);
 
             // Write your code here.
 
@@ -57,7 +57,7 @@ namespace FibonacciLessNum
             StringBuilder result = new StringBuilder(a.ToString());
             if (n < 1)
             {
-                return "0";
+                return result.ToString();
             }
 
             result.Append(" " + b);
@@ -74,7 +74,7 @@ namespace FibonacciLessNum
                 {
                     c = a + b;
                     a = b;
-                    b++;
+                    b = c;
                     result.Append(" " + c);
                 }
 

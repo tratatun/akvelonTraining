@@ -14,7 +14,7 @@ namespace UnitTestProject1
 
             //act
             double currVal = (Math.Pow((1 + Math.Sqrt(5)) / 2, n) - Math.Pow((1 - Math.Sqrt(5)) / 2, n)) / Math.Sqrt(5);
-            int[] arr = Program.GetFibonacciArr(n);
+            long[] arr = Program.GetFibonacciArr(n);
 
             //assert
             Assert.AreEqual((int)currVal, arr[n]);
@@ -29,7 +29,7 @@ namespace UnitTestProject1
 
             //act
             double currVal = (Math.Pow((1 + Math.Sqrt(5)) / 2, n) - Math.Pow((1 - Math.Sqrt(5)) / 2, n)) / Math.Sqrt(5);
-            int[] arr = Program.GetFibonacciArr(n);
+            long[] arr = Program.GetFibonacciArr(n);
 
             //assert
             Assert.AreEqual((int)currVal, arr[n]);
@@ -44,7 +44,7 @@ namespace UnitTestProject1
 
             //act
             double currVal = (Math.Pow((1 + Math.Sqrt(5)) / 2, n) - Math.Pow((1 - Math.Sqrt(5)) / 2, n)) / Math.Sqrt(5);
-            int[] arr = Program.GetFibonacciArr(n);
+            long[] arr = Program.GetFibonacciArr(n);
 
             //assert
             Assert.AreEqual((int)currVal, arr[n]);
