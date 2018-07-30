@@ -13,7 +13,11 @@ namespace FibonacciLessNum
             int n = int.Parse(Console.ReadLine());
 
             //WriteFibonacci(n);
-            Console.WriteLine(WriteFibonacciNumbers(n));
+            foreach(int x in FibonacciGen(n))
+            {
+                Console.WriteLine(x);
+            }
+            
             Console.ReadLine();
 
         }
@@ -26,6 +30,19 @@ namespace FibonacciLessNum
 
             // Write your code here.
 
+        }
+
+        public static IEnumerable<int> FibonacciGen(int n)
+        {
+            int prev = 0;
+            int next = 1;
+            for(int i = 0; i < n; i++)
+            {
+                int sum = prev + next;
+                prev = next;
+                next = sum;
+                yield return sum;
+            }
         }
 
         public static long[] GetFibonacciArr(int n)
